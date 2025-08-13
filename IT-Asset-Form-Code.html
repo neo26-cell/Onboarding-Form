@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IT Asset Receive Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      background: #232323;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #fff;
+    }
+    .container {
+      width: 800px;
+      margin: 30px auto;
+      background: #181818;
+      border: 2px solid #444;
+      box-shadow: 0 0 10px #000a;
+      padding: 32px 32px 16px 32px;
+      border-radius: 6px;
+    }
+    .header-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+    }
+    .header-table td, .header-table th {
+      border: 1px solid #444;
+      padding: 6px 10px;
+      background: #282828;
+      color: #bcbcbc;
+    }
+    .header-logo {
+      width: 170px;
+      text-align: center;
+      background: #1d1d1d;
+    }
+    .form-title {
+      text-align: center;
+      font-weight: bold;
+      color: #dedede;
+      margin: 10px 0 16px 0;
+      font-size: 1.3em;
+    }
+    .section {
+      border: 1px solid #444;
+      margin-bottom: 12px;
+      background: #232323;
+    }
+    .section-header {
+      font-weight: bold;
+      background: #232323;
+      padding: 8px 10px;
+      border-bottom: 1px solid #444;
+      color: #fff;
+    }
+    .section-content {
+      padding: 8px 10px;
+    }
+    .double-col {
+      display: flex;
+      border-bottom: 1px solid #444;
+    }
+    .double-col > div {
+      flex: 1;
+      border-right: 1px solid #444;
+      padding: 8px 10px;
+      min-width: 50%;
+      color: #fff;
+      font-size: 0.98em;
+    }
+    .double-col > div:last-child {
+      border-right: none;
+    }
+    .device-table, .sign-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .device-table td, .device-table th {
+      border: 1px solid #444;
+      padding: 7px 12px;
+      font-size: 0.97em;
+      background: #181818;
+    }
+    .device-table th {
+      background: #232323;
+      font-weight: normal;
+    }
+    .checkboxes {
+      margin: 6px 0 10px 0;
+    }
+    .checkboxes label {
+      margin-right: 28px;
+      font-weight: normal;
+    }
+    a {
+      color: #7bb3ff;
+      text-decoration: underline;
+    }
+    .remark {
+      background: #181818;
+      color: #fff;
+      width: 100%;
+      min-height: 38px;
+      border: 1px solid #444;
+      border-radius: 3px;
+      padding: 6px;
+      margin: 6px 0;
+      font-size: 0.98em;
+    }
+    .acknowledge {
+      font-size: 0.97em;
+      margin: 10px 0;
+      line-height: 1.7;
+    }
+    .sign-table {
+      margin-top: 22px;
+    }
+    .sign-table td {
+      border: none;
+      padding: 18px 8px 5px 8px;
+      border-top: 1px solid #444;
+      text-align: left;
+      width: 50%;
+      vertical-align: top;
+    }
+    .footer {
+      color: #bababa;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+    .footer span {
+      font-style: italic;
+      color: #b5b5b5;
+    }
+    @media (max-width: 900px) {
+      .container {
+        width: 96vw;
+        padding: 6vw 2vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .double-col {
+        flex-direction: column;
+      }
+      .container {
+        width: 100vw;
+        padding: 4vw 0.5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table class="header-table">
+      <tr>
+        <td class="header-logo" rowspan="2" style="font-size:0.75em;">
+          <img src="ZP-Logo.jpg" alt="Zuellig Pharma Logo" width="200"><br>
+        </td>
+        <td colspan="2" style="text-align:right;font-style:italic;font-size:12px;color:#bababa;background:#232323;">
+          MYBN IT ASSET MANAGEMENT FORM
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2" style="font-size:1.2em;color:#dedede;background:#232323;text-align:center;font-weight:500;">
+          IT Asset Receive Form<br>Onboarding
+        </th>
+      </tr>
+      <tr>
+        <td style="font-size:0.7em;">Document No: IT-Asset-Date-V1.0</td>
+        <td style="font-size:0.8em">Effective Date: July 7, 2025</td>
+        <td style="font-size:0.8em;text-align:right;">Page 1 of 1</td>
+      </tr>
+    </table>
+
+    <div class="form-title">IT Asset Receive Form for New Joiner</div>
+    <div class="section">
+      <div class="double-col">
+        <div>
+          <strong>[Principal Name / ZP Company]</strong><br>
+          ZPMY
+        </div>
+        <div>
+          <strong>End User Information:</strong>
+          <table class="device-table" style="margin-top:8px; width:90%; font-size:0.95em;">
+            <tr>
+              <th style="width:38%;background:#232323;color:#fff;">Full Name</th>
+              <td style="background:#181818;color:#fff;">
+                <input type="text" name="fullName" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;font-size:0.97em;">
+              </td>
+            </tr>
+            <tr>
+              <th style="background:#232323;color:#fff;">Email</th>
+              <td style="background:#181818;color:#fff;">
+                <input type="email" name="email" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;font-size:0.97em;">
+              </td>
+            </tr>
+            <tr>
+              <th style="background:#232323;color:#fff;">Dept</th>
+              <td style="background:#181818;color:#fff;">
+                <input type="text" name="dept" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;font-size:0.97em;">
+              </td>
+            </tr>
+            <tr>
+              <th style="background:#232323;color:#fff;">Start Date</th>
+              <td style="background:#181818;color:#fff;">
+                <input type="date" name="startDate" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;font-size:0.97em;">
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-header">Device Detail:</div>
+      <div class="section-content">
+        <table class="device-table">
+          <tr>
+            <th>Device Name</th>
+            <td><input type="text" value="MYPC" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;"></td>
+          </tr>
+          <tr>
+            <th>Device Model</th>
+            <td><input type="text" value="Lenovo ThinkPad E14" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;"></td>
+          </tr>
+          <tr>
+            <th>Serial Number</th>
+            <td><input type="text" value="345678909" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;"></td>
+          </tr>
+          <tr>
+            <th>Accessories</th>
+            <td><input type="text" value="Bag, Mouse, Charger" style="width:96%;background:#181818;color:#fff;border:1px solid #444;padding:4px;border-radius:3px;"></td>
+          </tr>
+        </table>
+        <div><strong>Device Condition:</strong></div>
+        <div class="checkboxes">
+          <label><input type="checkbox"/> New</label>
+          <label><input type="checkbox"/> Good</label>
+          <label><input type="checkbox"/> Damage</label>
+        </div>
+        <div>
+          <strong>Remark the issue:</strong>
+        </div>
+        <textarea class="remark" placeholder="Describe the issue here..."></textarea>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-header">Acknowledgment:</div>
+      <div class="section-content acknowledge">
+        I acknowledge receipt of the above IT assets and confirm that they are in good working condition unless otherwise stated. I understand that I am responsible for the safekeeping and proper use of these assets. In the event of any damage caused by me, including but not limited to physical damage, water damage, or fall damage, I agree to take full responsibility and bear any associated costs for repair or replacement which may be deducted from my salary. Furthermore, I understand that if the device is lost or stolen due to my negligence or failure to follow proper security protocols, I will be held accountable and may be required to cover the cost of replacement, subject to the company's asset management and security policies.
+      </div>
+    </div>
+
+    <!-- Signature Section Start -->
+    <div class="section" style="margin-top:32px;">
+      <div class="section-header">End User Signature:</div>
+      <div class="section-content" style="display:flex;flex-direction:column;align-items:flex-start;">
+        <label for="signaturePad" style="margin-bottom:8px;">Sign below or upload your signature:</label>
+        <canvas id="signaturePad" width="320" height="80" style="border:1px solid #444;background:#181818;border-radius:4px;cursor:crosshair;margin-bottom:10px;"></canvas>
+        <button type="button" onclick="clearSignature()" style="margin-bottom:10px;">Clear Signature</button>
+        <div style="margin-bottom:10px;">OR</div>
+        <input type="file" accept="image/*" id="signatureImage" style="margin-bottom:10px;">
+        <img id="signaturePreview" src="" alt="Signature Preview" style="display:none;max-width:320px;max-height:80px;border:1px solid #444;border-radius:4px;">
+      </div>
+    </div>
+    <!-- Signature Section End -->
+
+    <!-- Footer moved below signature section, styled as original -->
+    <div class="footer">
+      – FOR INTERNAL USE ONLY –<br>
+      <span>
+        This material is intended for Zuellig Pharma use only. It must not be reproduced in whole or in part, in any form, or by any means without a formal agreement or the written consent of the ZP MY Team. Any hard copy or unprotected soft copy of this document shall be regarded as uncontrolled copy.
+      </span>
+    </div>
+  </div>
+</body>
+<script>
+  // Signature Pad Drawing
+  const canvas = document.getElementById('signaturePad');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let drawing = false, lastX = 0, lastY = 0;
+
+    canvas.addEventListener('mousedown', function(e) {
+      drawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+    canvas.addEventListener('mouseup', () => drawing = false);
+    canvas.addEventListener('mouseout', () => drawing = false);
+    canvas.addEventListener('mousemove', function(e) {
+      if (!drawing) return;
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 2;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+
+    window.clearSignature = function() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    };
+  }
+
+  // Signature Image Upload Preview
+  const signatureImage = document.getElementById('signatureImage');
+  const signaturePreview = document.getElementById('signaturePreview');
+  if (signatureImage && signaturePreview) {
+    signatureImage.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          signaturePreview.src = evt.target.result;
+          signaturePreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
+</script>
+</html>
